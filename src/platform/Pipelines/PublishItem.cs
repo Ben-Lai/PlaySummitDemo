@@ -14,12 +14,14 @@ namespace Sitecore.Demo.Edge.Website.Pipelines
 
         public override void Process(PublishContext context)
         {
+
+            Log.Info("Beginning PublishAudit Log", this);
             var processedItems = context.ProcessedPublishingCandidates;
             foreach (var processedItem in processedItems)
             {
                 Log.Info("[PublishAudit] Publishing Item: " + processedItem.Key.ItemId.ToString(), this);
             }
-
+            Log.Info("Finished PublishAudit Log", this);
 
         }
     }
