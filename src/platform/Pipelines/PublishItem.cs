@@ -9,7 +9,7 @@ using System.Web;
 
 namespace Sitecore.Demo.Edge.Website.Pipelines
 {
-    public class PublishItem :PublishProcessor
+    public class PublishItem : PublishProcessor
     {
 
         public override void Process(PublishContext context)
